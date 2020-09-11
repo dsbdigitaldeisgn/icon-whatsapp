@@ -1,0 +1,74 @@
+// Setup icone
+
+/* position */
+$x : 1em;
+$y : 1em;
+/* time animation */
+$animationStart: 1.5s;
+$animationNotification: 3s;
+/* button */
+$fz : 16px;
+$bg-color : #56bb63;
+$sizeSquare : 52px;
+$w: ($sizeSquare / $fz) * 1em;
+$h: ($sizeSquare / $fz) * 1em;
+/* icon whatsSize  */
+$wIcon:$fz * 1.875;
+$hIcon:$fz * 1.875;
+
+#navFixedBottom {
+    &.ctaNavNoView {
+        font-size: 16px;
+        position: absolute;
+        right: $x;
+        bottom: $y;
+        @include animation (
+            $name       : showSidebarBottom, 
+            $duration   : $animationStart, 
+            $timing     : ease
+        );
+        & a {
+            border: none;
+            &.whatsapp {
+                @include displayFlex( true, row, 0, center );
+                background-color:$bg-color;
+                color: #fff;
+                border-radius: 50%;
+                width: $w;
+                height: $h;
+                position: relative;
+                &::before {
+                    content: '1';
+                    display: block;
+                    position: absolute;
+                    top: -.2em;
+                    right: -.1em;
+                    background-color: red;
+                    color: #fff;
+                    font-size: .8em;
+                    border-radius: 50%;
+                    text-align: center;
+                    overflow: hidden;
+                    width: 1.15em;
+                    padding: 0.125em;
+                    @include transitions( .3s );
+                    @include animation (
+                        $name       : showIcon_NotificationWhats, 
+                        $duration   : $animationNotification, 
+                        $timing     : ease);
+                    //animation-delay: 3s;
+                }
+                & div {
+                    width: $wIcon;
+                    height: $hIcon;
+                    margin: 0 auto;
+                    & svg {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

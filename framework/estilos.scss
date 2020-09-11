@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*
+
+	Document   	: estilos.css
+	Autor		: @douglasdsbraga - designer digital and front-end developer 
+
+*/
+
+// Global init 
+@import "global/_variaveis.scss"; 					// Carrega toddas as variaveis do projeto
+@import "global/_functions.scss"; 					// Carrega as funções
+
+// Bibliotecas ------------------------------------------ 
+
+
+// Objetos geométricos
+@import "lib/objetos-geometricos/_quadrado.scss";
+@import "lib/objetos-geometricos/_retangular.scss";
+@import "lib/objetos-geometricos/_triangulo.scss";
+
+// Transformacões
+@import "lib/transformacoes/_rotate.scss";
+@import "lib/transformacoes/_scale.scss";
+@import "lib/transformacoes/_skew.scss";
+@import "lib/transformacoes/_translate.scss";
+@import "lib/transformacoes/_mixins.scss";
+
+// Transições
+@import "lib/transicoes/_mixin.scss";
+@import "lib/transicoes/_transitions.scss";
+
+// efeitos
+@import "lib/efeitos/_animations.scss";
+@import "lib/efeitos/_box-shadows.scss";
+@import "lib/efeitos/_grayScale.scss";
+@import "lib/efeitos/_text-shadow.scss";
+@import "lib/efeitos/_gradientes.scss";
+
+////////////////////////////////////////////////////////////
+// Páginas ---------------------------------------------
+@import "paginas/_custom.scss";
+
+
+
