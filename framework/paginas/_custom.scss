@@ -15,6 +15,8 @@ $h: ($sizeSquare / $fz) * 1em;
 /* icon whatsSize  */
 $wIcon:$fz * 1.875;
 $hIcon:$fz * 1.875;
+/* Size Notification */ 
+$sizeNotification : $wIcon / 3 ;
 
 #navFixedBottom {
     &.ctaNavNoView {
@@ -45,12 +47,11 @@ $hIcon:$fz * 1.875;
                     right: -.1em;
                     background-color: red;
                     color: #fff;
-                    font-size: .8em;
+                    font-size: $sizeNotification;
                     border-radius: 50%;
                     text-align: center;
                     overflow: hidden;
-                    width: 1.15em;
-                    padding: 0.125em;
+                    padding: 0.37em 0.67em;
                     @include transitions( .3s );
                     @include animation (
                         $name       : showIcon_NotificationWhats, 
